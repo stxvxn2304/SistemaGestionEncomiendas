@@ -7,14 +7,14 @@ public enum EstadoEnvio {
     CON_NOVEDAD("Con novedad"),
     ENTREGADO("Entregado");
 
-    private final String descripcion;
+    private final String nombre;
 
-    EstadoEnvio(String descripcion) {
-        this.descripcion = descripcion;
+    EstadoEnvio(String nombre) {
+        this.nombre = nombre;
     }
 
-    public String getDescripcion() {
-        return descripcion;
+    public String toString() {
+        return nombre;
     }
 }
 
