@@ -9,22 +9,23 @@ public class Envio {
     private String destino;
     private Cliente remitente;
     private Cliente destinatario;
+    private Salida salida;
     private String numeroGuia;
     private LocalDateTime fechaRegistro;
     private LocalDateTime fechaRetiro;
     
     public Envio(int idEnvio, Cotizacion cotizacion, Paquete paquete, String destino, Cliente remitente,
-            Cliente destinatario, String numeroGuia, LocalDateTime fechaRegistro) {
+            Cliente destinatario, Salida salida, String numeroGuia, LocalDateTime fechaRegistro) {
         this.idEnvio = idEnvio;
         this.cotizacion = cotizacion;
         this.paquete = paquete;
         this.destino = destino;
         this.remitente = remitente;
         this.destinatario = destinatario;
+        this.salida = salida;
         this.numeroGuia = numeroGuia;
         this.fechaRegistro = fechaRegistro;
     }
-
     public int getIdEnvio() {
         return idEnvio;
     }
@@ -61,6 +62,12 @@ public class Envio {
     public void setDestinatario(Cliente destinatario) {
         this.destinatario = destinatario;
     }
+    public Salida getSalida() {
+        return salida;
+    }
+    public void setSalida(Salida salida) {
+        this.salida = salida;
+    }
     public String getNumeroGuia() {
         return numeroGuia;
     }
@@ -79,4 +86,6 @@ public class Envio {
     public void setFechaRetiro(LocalDateTime fechaRetiro) {
         this.fechaRetiro = fechaRetiro;
     }
+    
+    
 }
